@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dev Moni</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #87CEEB, #ffffff);
+      height: 100vh;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navigation bar styling */
+    nav {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding-top: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      margin-left: 90px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 100%;
+  left: 0;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+    /* Cloud styling */
+    .cloud {
+      position: absolute;
+      width: 120px;
+      height: 60px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+      color: #444;
+      text-align: center;
+      padding: 10px;
+      z-index: 2;
+    }
+
+    .cloud::before,
+    .cloud::after {
+      content: "";
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      z-index: -1; /* Push behind the text */
+    }
+
+    .cloud::before {
+      width: 80px;
+      height: 80px;
+      top: -30px;
+      left: 20px;
+    }
+
+    .cloud::after {
+      width: 100px;
+      height: 100px;
+      top: -50px;
+      left: 60px;
+    }
+
+    /* Cloud positions and animations */
+    .cloud1 { top: 20%; left: -150px; animation: moveClouds 20s linear infinite; }
+    .cloud2 { top: 50%; left: -200px; animation: moveClouds 25s linear infinite; }
+    .cloud3 { top: 75%; left: -250px; animation: moveClouds 30s linear infinite; }
+    .cloud4 { top: 85%; left: -180px; animation: moveClouds 22s linear infinite; }
+
+    @keyframes moveClouds {
+      from { transform: translateX(0); }
+      to { transform: translateX(190vw); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <h1>Dev Moni</h1>
+    <ul>
+      <li>Home</li>
+      <li class="dropdown">
+        About Us
+        <div class="dropdown-content">
+          <a href="#">Web Design</a>
+          <a href="#">Front End</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        Contact Us
+      <div class="dropdown-content">
+        <a href="#">9944958315</a>
+        </div>
+        </li>
+    </ul>
+  </nav>
+
+  <!-- Animated clouds with text -->
+  <div class="cloud cloud1">Hello!</div>
+  <div class="cloud cloud2">Hollywood Manager</div>
+  <div class="cloud cloud3">Welcome</div>
+  <div class="cloud cloud4">Unngguuu</div>
+
+
+</body>
+</html>
